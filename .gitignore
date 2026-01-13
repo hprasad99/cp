@@ -1,32 +1,60 @@
-# Prerequisites
-*.d
-
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
+# ==============================
+# Compiled binaries / executables
+# ==============================
 *.exe
 *.out
 *.app
+a.out
+
+# ==============================
+# Object files
+# ==============================
+*.o
+*.obj
+*.lo
+*.slo
+
+# ==============================
+# Precompiled headers
+# ==============================
+*.gch
+*.pch
+
+# ==============================
+# Build directories
+# ==============================
+build/
+bin/
+dist/
+cmake-build-*/
+
+# ==============================
+# CMake files
+# ==============================
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# ==============================
+# VS Code specific
+# ==============================
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# ==============================
+# Debug / temporary files
+# ==============================
+*.log
+*.tmp
+*.swp
+*~
+
+# ==============================
+# OS generated files
+# ==============================
+.DS_Store
+Thumbs.db
