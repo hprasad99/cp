@@ -1,0 +1,37 @@
+#include<iostream>
+using namespace std;
+int main() {
+    int t;
+    cin >> t;
+    while(t--) {
+        int n;
+        cin>>n;
+        int cnt2 = 0, cnt3 = 0;
+
+        while(n % 2 == 0) {
+            n /= 2;
+            ++cnt2;
+        }
+
+        while(n % 3 == 0) {
+            n /= 3;
+            ++cnt3;
+        }
+
+        if(n==1 && cnt2 <= cnt3) {
+            cout << 2 * cnt3 - cnt2 << endl; 
+        } else {
+            cout << -1 << endl;
+        }
+    }
+    return 0;
+}
+
+/**
+ * 125/2 = 62.5
+ * 125/3 = 41
+ * 
+ * 124 / 2 = 62 --> 1
+ * 62 / 2 = 31 --> 2
+ * 
+ */
