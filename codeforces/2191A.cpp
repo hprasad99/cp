@@ -37,36 +37,25 @@ int main() {
     int t;
     cin >> t;
     while(t--) {
-        int size;
-        cin >> size;
-        vector<int> cards(size);
-        for(int i=0; i<size; i++) {
-            cin >> cards[i];
+        int n;
+        cin >> n;
+        vector<pair<int,char>> v(n);
+        for(int i=0; i<n; i++) {
+            int x;
+            cin >> x;
+            char color = (i%2) ? 'B' : 'R';
+            v[i] = {x, color};
         }
-        unordered_map<int, char> mp;
-        for(int i=0; i<size; i++) {
-            if(i % 2 == 0) {
-                mp[cards[i]] = 'R';
-            } else {
-                mp[cards[i]] = 'B';
+        sort(v.begin(), v.end());
+        bool bad = false;
+        for(int i=1; i<n; i++) {
+            if(v[i].second == v[i-1].second) {
+                bad = true;
+                break;
             }
         }
-        map<int, char> sorted_mp(mp.begin(), mp.end());
-        vector<char> ans;
-        for (auto &p: sorted_mp) {
-            ans.push_back(p.second);
-        }
-        bool flag = 0;
-        for(int i=1; i<ans.size(); i++) {
-            if(ans[i] == ans[i-1]) {
-                flag = 1;
-            }
-        }
-        if(flag) {
-            cout << "NO" << endl;
-        }else {
-            cout<< "YES" <<endl;
-        }
+        cout << (bad ? "NO\n": "YES\n");
+        cout<<endl;
     }
     return 0;
 }
