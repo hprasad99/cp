@@ -1,5 +1,6 @@
 #include<iostream>
-#include<map>
+#include<vector>
+#include<algorithm>
 using namespace std;
 int main() {
     // 2 - 3 - 4 - 1
@@ -55,7 +56,6 @@ int main() {
             }
         }
         cout << (bad ? "NO\n": "YES\n");
-        cout<<endl;
     }
     return 0;
 }
