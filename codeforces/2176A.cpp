@@ -3,6 +3,8 @@
  */
 #include<iostream>
 #include<algorithm>
+#include<vector>
+#include<math.h>
 using namespace std;
 int solve() {
     int n;
